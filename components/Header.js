@@ -1,0 +1,66 @@
+import Image from "next/image";
+import {
+  MagnifyingGlassIcon,
+  PlusCircleIcon,
+  UserGroupIcon,
+  HeartIcon,
+  PaperAirplaneIcon,
+  Bars3Icon,
+} from "@heroicons/react/24/outline";
+import { HomeIcon } from "@heroicons/react/24/solid";
+
+function Header() {
+  return (
+    <div>
+      <div className="flex justify-between max-w-6xl mx-5 lg:mx-auto">
+        {/* left */}
+        <div className="relative hidden lg:inline-grid w-24 cursor-pointer">
+          <Image
+            src="https://links.papareact.com/ocw"
+            fill
+            style={{ objectFit: "contain" }}
+          />
+        </div>
+        <div className="relative w-10 lg:hidden flex-shrink-0 cursor-pointer">
+          <Image
+            src="https://img.icons8.com/ios/50/null/instagram-new--v1.png"
+            fill
+            style={{ objectFit: "contain" }}
+          />
+        </div>
+
+        {/* middle search input field */}
+        <div className="max-w-xs">
+          <div className="relative mt-1 p-3 rounded-md">
+            <div className="absolute inset-y-0 pl-3 flex items-center pointer-events-none">
+              <MagnifyingGlassIcon className="h-5 w-5 text-gray-500" />
+            </div>
+            <input
+              className="bg-gray-50 block w-full pl-10 sm:text-sm border-gray-300 focus:ring-black focus:border-black rounded-md"
+              type="text"
+              placeholder="Search"
+            />
+          </div>
+        </div>
+
+        {/* right */}
+        <div className="flex items-center justify-end space-x-4">
+          <Bars3Icon className="h-6 md:hidden cursor-pointer" />
+          <HomeIcon className="navBtn" />
+          <PaperAirplaneIcon className="navBtn"/> 
+          <PlusCircleIcon className="navBtn"/>
+          <UserGroupIcon className="navBtn"/>
+          <HeartIcon className="navBtn"/>
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3zo4EAEtqcvbiwxdlgnNUUgMrqbIPezOkDKeoFLRLdoCamQ3t23r8C5hePqGbqgROu_k&usqp=CAU"
+            alt="profile pic"
+            className="h-10 rounded-full cursor-pointer"
+          /> 
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Header;
