@@ -1,10 +1,10 @@
-import Feed from "@/components/Feed";
-import Header from "@/components/Header";
-import Head from "next/head";
+import Feed from '@/components/Feed'
+import Header from '@/components/Header'
+import Head from 'next/head'
 
-export default function Home() {
+export default function Home () {
   return (
-    <div className="bg-gray-50 h-screen overflow-y-scroll scrollbar-hide">
+    <div className='bg-gray-50 h-screen overflow-y-scroll scrollbar-hide'>
       <Head>
         <title>Instagram Clone</title>
       </Head>
@@ -15,5 +15,5 @@ export default function Home() {
       <Feed />
       {/* Modal */}
     </div>
-  );
+  )
 }
